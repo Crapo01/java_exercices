@@ -1,0 +1,44 @@
+package com.capus.pokemon_exercise;
+
+public class Pokemon {
+	protected String name;
+	protected int attack;
+	protected int defence;
+	protected int health;
+	protected String type;	
+	protected String weakness;
+
+	public int getAttack() {
+		return attack;
+	}
+	
+	// Constructor
+	public Pokemon(String name, int attack, int defence, int health, String type, String weakness) {
+		super();
+		this.name = name;
+		this.attack = attack;
+		this.defence = defence;
+		this.health = health;
+		this.type = type;
+		this.weakness = weakness;
+	}
+
+	public void calculateDamage(int i) {
+		int atk = (int) (i * Math.random() + 1);
+		int def = (int) (defence * Math.random() + 1);
+		int damageResult = atk - def;
+		if (damageResult > 0) {
+			health -= damageResult;
+			System.out.println("OUCH!!! " + name + " is attacked with " + atk + " and only " + def + " in defence");
+		} else {
+			System.out.println("Cmon!!! " + atk + " in attack, is that all u got???");
+		}
+		System.out.println(name+": Health left: " +health);
+	}
+
+	public void attack(Pokemon) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

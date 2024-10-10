@@ -1,0 +1,35 @@
+package com.capus.pokemon_exercise;
+
+public class Pokemon {
+	protected String nom;
+	protected int attack;
+	protected int defence;
+	protected int health;
+
+	// Constructor
+	public Pokemon(String nom, int attack, int defence, int health) {
+		super();
+		this.nom = nom;
+		this.attack = attack;
+		this.defence = defence;
+		this.health = health;
+	}
+
+	public int getAttack() {
+		return attack;
+	}
+
+	public void calculateDamage(int i) {
+		int atk = (int) (i * Math.random() + 1);
+		int def = (int) (defence * Math.random() + 1);
+		int damageResult = atk - def;
+		if (damageResult > 0) {
+			health -= damageResult;
+			System.out.println("OUCH!!! " + nom + " is attacked with " + atk + " and only " + def + " in defence");
+		} else {
+			System.out.println("Cmon!!! " + atk + " in attack, is that all u got???");
+		}
+
+	}
+
+}

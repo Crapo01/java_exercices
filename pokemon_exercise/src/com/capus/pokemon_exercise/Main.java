@@ -1,0 +1,13 @@
+package com.capus.pokemon_exercise;
+
+public class Main {
+
+	public static void main(String[] args) {
+		GameInit newMatch = new GameInit();
+		
+		newMatch.showAvailablePokemons();
+		newMatch.setPlayers();		
+		newMatch.battleLoop();
+	}
+
+}

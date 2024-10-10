@@ -1,0 +1,38 @@
+package com.capus.pokemon_exercise;
+
+public class Pokemon {
+	private String nom;
+	private String type;
+	private int attack;
+	private int defence;
+	private String weakness;
+	private int health;
+	
+	//Constructor
+	public Pokemon(String nom, String type, int attack, int defence, String weakness, int health) {
+		this.nom = nom;
+		this.type = type;
+		this.setAttack(attack);
+		this.defence = defence;
+		this.weakness = weakness;
+		this.health = health;
+	}
+
+	public void calculateDamage(int i) {
+		int damageResult= (int) (i*Math.random())-(int) (defence*Math.random());
+		health -=damageResult;
+		System.out.println(health);
+		
+	}
+
+	public int getAttack() {
+		return attack;
+	}
+
+	public void setAttack(int attack) {
+		this.attack = attack;
+	}
+	
+	
+
+}

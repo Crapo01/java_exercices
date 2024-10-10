@@ -1,0 +1,5 @@
+INDEX VERSION 1.134+C:\Users\lucpa\Documents\0-EPSI\10-cours zeynel Java\.metadata\.plugins\org.eclipse.jdt.core
+3435648363.index
+233952735.index
+3555013250.index
+1865797976.index

@@ -1,0 +1,16 @@
+package com.capus.pokemon_exercise;
+
+public class EarthPokemon extends Pokemon{
+	
+	public EarthPokemon(String nom, int attack, int defence, int health) {
+		super(nom, attack, defence, health);
+		// TODO Auto-generated constructor stub
+	}
+
+
+	protected String type;
+	
+	
+	protected String weakness;
+	
+}

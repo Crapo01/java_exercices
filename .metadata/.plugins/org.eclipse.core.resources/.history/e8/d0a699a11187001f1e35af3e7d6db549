@@ -1,0 +1,5 @@
+package com.capus.pokemon_exercise;
+
+public abstract class GameInit {
+
+}

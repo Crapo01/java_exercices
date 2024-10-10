@@ -1,0 +1,7 @@
+package com.capus.pokemon_exercise;
+
+public class GameInit {
+	protected Pokemon player1;
+	protected Pokemon player2;
+	protected int turn=0;
+}

@@ -1,0 +1,10 @@
+package com.capus.pokemon_exercise;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Pokemon p= new Pokemon("Wormy", 10, 5, 100);
+		p.calculateDamage(p.getAttack());
+	}
+
+}

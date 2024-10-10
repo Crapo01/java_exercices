@@ -1,0 +1,47 @@
+package com.capus.pokemon_exercise;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.Random;
+
+public class GameInit {
+	protected Pokemon player1;
+	protected Pokemon player2;
+	protected int turn=20;
+	Pokemon p1= new EarthPokemon("Wormy", 10, 5, 200, "earth", "water");
+	Pokemon p2= new FirePokemon("Burny", 20, 5, 50, "fire", "earth");
+	Pokemon p3= new WaterPokemon("Icy", 15, 10, 100, "water", "fire");
+	Pokemon p4= new EarthPokemon("Stony", 5, 30, 150, "earth", "fire");
+	List<Pokemon> pokemons = Arrays.asList(p1,p2,p3,p4);
+	
+	
+	public void showAvailablePokemons() {
+		System.out.println("////////////////////////////// List of available pokemons:");
+		for (Pokemon pokemon : pokemons) {
+			System.out.println(pokemon.name+" as "+pokemon.type+" type...");
+		}
+	}
+	
+	public void setPlayers() {
+		System.out.println("////////////////////////////// Selecting players...");
+		Random rand = new Random();
+	    player1 = pokemons.get(rand.nextInt(pokemons.size()));
+	    System.out.println("Player1 is "+player1.name);
+	    player2 = pokemons.get(rand.nextInt(pokemons.size()));
+	    System.out.println("Player2 is "+player2.name);
+	}
+	
+	public void battleLoop() {
+		do {
+			if ((turn % 2) == 0)
+			{
+				System.out.println("Player1 is attacking");
+			}
+			else
+			{
+				System.out.println("Player2 is attacking");
+			}
+			System.out.println("End of turn");
+		} while (turn==0);
+	}
+}

@@ -1,0 +1,14 @@
+package com.capus.pokemon_exercise;
+
+public class EarthPokemon extends Pokemon{
+	
+	protected String type;	
+	protected String weakness;
+	public EarthPokemon(String nom, int attack, int defence, int health, String type, String weakness) {
+		super(nom, attack, defence, health);
+		this.type = type;
+		this.weakness = weakness;
+	}
+	
+	
+}

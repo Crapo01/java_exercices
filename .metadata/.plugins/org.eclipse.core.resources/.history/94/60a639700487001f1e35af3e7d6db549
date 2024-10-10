@@ -1,0 +1,42 @@
+package com.capus.pokemon_exercise;
+
+public class Pokemon {
+	private String nom;
+	private String type;
+	private int attack;
+	private int defence;
+	private String weakness;
+	private int health;
+	
+	//Constructor
+	public Pokemon(String nom, String type, int attack, int defence, String weakness, int health) {
+		this.nom = nom;
+		this.type = type;
+		this.attack = attack;
+		this.defence = defence;
+		this.weakness = weakness;
+		this.health = health;
+	}
+
+	public void calculateDamage(int i) {
+		int atk = (int) (i*Math.random());
+		int def = (int) (defence*Math.random());
+		int damageResult= atk-def;
+		if (damageResult>0) {
+			health -=damageResult;
+			System.out.println("OUCH!!! "+nom+" attacked with "+atk+" and only "+def+" in defence");
+		}else {
+			System.out.println("Cmon!!! "+atk+" is that all u got???");
+		}
+		
+	}
+
+	public int getAttack() {
+		return attack;
+	}
+
+	
+	
+	
+
+}

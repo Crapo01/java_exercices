@@ -1,0 +1,22 @@
+package com.capus.pokemon_exercise;
+
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.List;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Pokemon p1= new EarthPokemon("Wormy", 10, 10, 100, "earth", "water");
+		Pokemon p2= new FirePokemon("Burny", 10, 10, 100, "fire", "earth");
+		Pokemon p3= new FirePokemon("icy", 10, 10, 100, "water", "fire");
+		List<Pokemon> pokemons = Arrays.asList(p1,p2,p3);
+	for (Pokemon pokemon : pokemons) {
+			System.out.println("Spawn "+pokemon.name+" as "+pokemon.type+" type...");
+		}
+		
+		p1.calculateDamage(p1.getAttack());
+	}
+
+}
